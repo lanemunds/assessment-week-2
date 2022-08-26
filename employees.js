@@ -48,7 +48,7 @@ let emp1 = new Employee('Jess', 'weekday mornings, weekday afternoons')
     `empOne` object.
 */
 
-emp1.getScheduled()
+// emp1.getScheduled()
 
 
 /*
@@ -63,9 +63,8 @@ emp1.getScheduled()
     dot or bracket notation.
 */
 
-const emp2 =new Employee( {...emp1})
+const emp2 ={...emp1}
 emp2.name = 'nick'
-
 
 
 
@@ -103,7 +102,7 @@ getEmployees(){
     console.log(this.name,'manages' , this.employees)
 }
 addEmployees(emp){
-employees.push(emp)
+this.employees.push(emp)
 }
 }
 /*

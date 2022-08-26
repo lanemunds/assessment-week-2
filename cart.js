@@ -35,9 +35,9 @@ const cart = [
 
 
 
-// const arr = cart.map(cart => Number(cart.price))
-// const summedPrice = arr.reduce(function(total, curr){
-//    return total + curr },0)
+const arr = cart.map(cart => Number(cart.price))
+const summedPrice = arr.reduce(function(total, curr){
+   return total + curr },0)
 
 
 //   console.log(summedPrice)
@@ -58,9 +58,9 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-const calcFinalPrice =((cartTotal, couponValue, tax)=> cartTotal+(cartTotal* (tax*.01)) - couponValue)
+const calcFinalPrice =((cartTotal, couponValue, tax)=> cartTotal+(cartTotal* tax) - couponValue)
 
-// console.log(calcFinalPrice(100,10,6))
+// console.log(calcFinalPrice(summedPrice,10,.06))
 
 //////////////////PROBLEM 3////////////////////
 /*  

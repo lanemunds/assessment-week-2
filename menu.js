@@ -111,8 +111,8 @@ let foodArr = [
         price: 18,
         category: 'classic',
         popularity: 'very',
-        rating: '5',
-        tags:['pepperoni']
+        rating: '4',
+        tags:['pepperoni','kids']
     
     },
     {
@@ -129,9 +129,19 @@ let foodArr = [
         price: 15,
         category: 'good',
         popularity: 'very',
-        rating: '5',
-        tags:['cheese']
+        rating: '4',
+        tags:['cheese','kids','veggitarian']
     
+    },
+    {  
+    name : 'Meat Lovers',
+    price: 22,
+    category: 'good',
+    popularity: 'very',
+    rating: '5',
+    tags:['ham','pepperoni','bacon','sausage']
+
+
     }
             
 ]
@@ -150,11 +160,13 @@ let foodArr = [
     your food objects has.
 */
 
-const filteredFood = foodArr.filter(function(el){
-return el.tags.includes('pepperoni')
-} 
-)
+// const filteredFood =foodArr.filter((el)=>{
+// if(el.tags.includes('kids')){
+// return el
+// }
+// })
 
+// console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -196,7 +208,18 @@ return el.tags.includes('pepperoni')
     Return the filtered array from the entire function
 */
 
-const filteredByProperty = (property, number, type)
+const filteredByProperty = (property, number, type) =>{
+const filteredFood = foodArr.filter((food)=>{
+    if(type === 'above'){
+        return food[property]>= number
+    }else{
+        return food[property]<= number
+    }
+})
+
+return filteredFood
+}
+
 
 
 /*
@@ -206,4 +229,4 @@ const filteredByProperty = (property, number, type)
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+console.log(filteredByProperty('price', 19, 'below'))
