@@ -56,7 +56,7 @@ const canWeDeliver = (zipCode)=>{
     }else(console.log('Sorry, we cant deliver to that address'))
 }
 
-// canWeDeliver(85201)
+// canWeDeliver(85205)
 
 
 /* 
@@ -77,14 +77,24 @@ const canWeDeliver = (zipCode)=>{
 */
 
 // CODE HERE
+
+let inArea = false
 const canWeDeliverTwo = (zipcode) => {
     for(i=0; i < deliveryAreaZipCodes.length; i++){
-        if([i]= zipcode){
-            console.log('Youre in our delivery area!')
-        }else(console.log('we cant deliver to that address'))
-    }
-}
-// canWeDeliver(85205)
+        if(deliveryAreaZipCodes[i]=== zipcode){
+      inArea = true
+        }}
+        if (inArea === true ){
+            console.log('Youre in our delivery area!')  
+        }else (console.log('sorry we dont deliver to your address'))
+    }   
+        
+            
+       
+
+      
+
+// canWeDeliverTwo(85205)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -119,11 +129,16 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
-for(let attribut in deals)
-if(deals.title = '15% off!'){
-    title.replace('15', 10)
-}
+// CODE HERE
+
+
+
+
+
+deals[0].title = deals[0].title.replace('15%',' 10%')
+
+console.log(deals[0])
+
 
 /*
     The restaurant is going to continue its
@@ -138,3 +153,7 @@ if(deals.title = '15% off!'){
     to be displaying wrong on the live site.
 */
 
+deals[1].desc = deals[1].desc.replace('March', 'April').trim()
+
+
+console.log(deals[1])
